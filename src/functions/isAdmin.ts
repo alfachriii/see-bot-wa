@@ -1,4 +1,4 @@
-import admin from '../../users/admin.json';
+import admin from '../users/admin.json';
 const adminList: string[] = admin.map((item: { userId: any }) => item.userId);
 
 export const isAdmin = (userId: string) => {

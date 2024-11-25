@@ -7,6 +7,6 @@ export class CommandMenuTools extends Command{
     }
 
     execute(msg: Message, args: string[]): void {
-        msg.reply("*Menu Tools dari seeBot:*\n\n*1. _!sticker_*\nUntuk membuat sticker\nUsage: kirim gambar dengan caption !sticker\n")
+        msg.reply("*Menu Tools dari seeBot:*\n\n*1. _!sticker_*\nUntuk membuat sticker\nUsage: kirim gambar/video dengan caption !sticker\n")
     }
 }

@@ -1,0 +1,26 @@
+{   
+    "author": {
+        "name": "al",
+        "contact": "6282313116359",
+        "instagram": "www.instagram.com/alsseeee"
+    },
+    "admin": [
+        {
+            "name": "al",
+            "desc": "ADMIN",
+            "userId": "6282313116359@c.us"
+        },
+        {
+            "name": "sasa",
+            "desc": "ADMIN",
+            "userId": "6283122785355@c.us"
+        }
+    ],
+    "botName": "seeBOT",
+    "donationImg": "",
+    "limitToolsUsage": 4,
+    "basePathSrc": "/home/al/Documents/Coding/bot-wa-tsc/src/",
+    "basePathTemp": "/home/al/Documents/Coding/bot-wa-tsc/src/temp/",
+    "ffmpegPath": "/usr/bin/ffmpeg"
+}
+
