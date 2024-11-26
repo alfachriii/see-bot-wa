@@ -20,7 +20,7 @@ const setFilePublic = async (fileId: string) => {
 };
 
 // Fungsi untuk upload file
-export async function uploadFile(
+export async function uploadFileToDrive(
   typeFile: string,
   ext: string,
   nameFileUp: string

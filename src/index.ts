@@ -38,10 +38,6 @@ client.on("qr", (qr) => {
   console.log("SCAN QR")
 });
 
-client.on("ready", () => {
-  console.log("Client Ready...");
-});
-
 export const shutdown = async () => {
   console.log("Shutting down bot...");
   try {
@@ -62,6 +58,10 @@ process.on("exit", shutdown);
 client.on("disconnected", (reason) => {
   console.log(reason);
 });
+
+client.on("ready", () => {
+  console.log("Client ready...")
+})
 
 client.on("message", async (msg) => {
   const isUserAdded = _limit.find((user: { userId: string; }) => user.userId === msg.from)

@@ -16,6 +16,17 @@
             "userId": "6283122785355@c.us"
         }
     ],
+    "commands": {
+        "menu": [
+            "menu", "menutools"
+        ],
+        "tools": {
+            "conversion": [
+                "tomp3", "sticker"
+            ]
+        }
+        
+    },
     "botName": "seeBOT",
     "donationImg": "",
     "limitToolsUsage": 4,
