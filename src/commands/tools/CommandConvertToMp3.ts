@@ -15,15 +15,7 @@ export class CommandConvertToMp3 extends Command {
   async execute(msg: Message, args: string[]): Promise<void> {
     if (!msg.hasMedia) {
       msg.reply("Tolong Masukkan / kirim video yang ingin diconvert!");
-      const buffer = fs.readFileSync(`${config.basePathSrc}media/high.png`);
-      const media = new MessageMedia(
-        "image/png",
-        buffer.toString("base64"),
-        "mp4tomp3.zip"
-      );
-      // const media = fs.readFileSync(`${config.basePathSrc}media/nidji - rahasia hati.mp4`);
-      client.sendMessage(msg.from, media, { caption: "!mp4tomp3" });
-      return;
+      return
     }
     const media = await msg.downloadMedia();
     const mimetype = media.mimetype;
@@ -46,7 +38,7 @@ export class CommandConvertToMp3 extends Command {
         client.sendMessage(msg.from, convertedVideo);
         client.sendMessage(
           msg.from,
-          "Anda Bisa Gunakan argumen tambahan seperti\n*_!tomp3 doc_*\nAgar hasil convert dikirim dalam bentuk dokumen"
+          "Anda Bisa Gunakan argumen tambahan seperti:\n*_!tomp3 doc_*\nAgar hasil convert dikirim dalam bentuk dokumen"
         );
       }
       await delay(1500);

@@ -2,5 +2,5 @@
 .wwebjs_cache/
 node_modules
 .env
-./src/media/*
-./src/config/*
+src/media/*
+src/config/*

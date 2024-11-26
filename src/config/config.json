@@ -30,6 +30,7 @@
     "botName": "seeBOT",
     "donationImg": "",
     "limitToolsUsage": 4,
+    "limitAiUsage": 10,
     "basePathSrc": "/home/al/Documents/Coding/bot-wa-tsc/src/",
     "basePathTemp": "/home/al/Documents/Coding/bot-wa-tsc/src/temp/",
     "ffmpegPath": "/usr/bin/ffmpeg"

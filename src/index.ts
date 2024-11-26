@@ -65,9 +65,10 @@ client.on("ready", () => {
 
 client.on("message", async (msg) => {
   const isUserAdded = _limit.find((user: { userId: string; }) => user.userId === msg.from)
+  const _limitLenght = _limit.length
   const user = await msg.getContact();
   if(isUserAdded === undefined) {
-    _limit.push({ "userId": msg.from, "name": user.pushname, "convertToolsUsed": 0 })
+    _limit.push({ "id": Math.floor(_limitLenght + 1), "userId": msg.from, "name": user.pushname, "convertToolsUsed": 0, "chatAiUsed": 0 })
     fs.writeFileSync(`${config.basePathSrc}database/limit.json`, JSON.stringify(_limit))
     for (const command of commands) {
       command.handle(msg);
