@@ -5,6 +5,7 @@ import { Message } from "whatsapp-web.js";
 import { model } from "../lib/geminiAi";
 import Command from "./Command";
 import fs from "fs";
+import { client } from "..";
 
 export class CommandChatAi extends Command {
   constructor() {

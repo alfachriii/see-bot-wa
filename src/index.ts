@@ -73,8 +73,8 @@ client.on("message", async (msg) => {
     for (const command of commands) {
       command.handle(msg);
     }
-  } 
-  
+  }
+
   for (const command of commands) {
     command.handle(msg);
   }
