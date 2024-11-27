@@ -56,9 +56,8 @@ export const downloadTiktok = async (url: string) => {
 
   // Klik tombol download
   const downloadButtonSelector = "#hero > div > form > button"; // Selektor tombol download
-  await page.waitForSelector(downloadButtonSelector, { timeout: 10000 });
+  await page.waitForSelector(downloadButtonSelector, { timeout: 10000, visible: true });
   await delay(1500);
-  await page.screenshot({ path: "debug.png", fullPage: true });
   await page.click(downloadButtonSelector);
 
   const type = url.split("/")[4];
@@ -68,7 +67,7 @@ export const downloadTiktok = async (url: string) => {
   // cek jika foto dapatkan link download dengan cara ini
   if (type === "photo") {
     const divParentSelector = "#download > div.columns.is-multiline.mt-3";
-    await page.waitForSelector(divParentSelector);
+    await page.waitForSelector(divParentSelector, {visible: true});
     await delay(1000);
     // const divParentExists = (await page.$(divParentSelector)) !== null;
 
@@ -98,7 +97,6 @@ export const downloadTiktok = async (url: string) => {
   const downloadLinkSelector =
     "#download > div > div.video-links > a.button.download-file"; // Selektor link download
   await page.waitForSelector(downloadButtonSelector, { timeout: 10000 });
-  await page.screenshot({ path: "debug2.png", fullPage: true });
 
   downloadLink.push(await page.$eval(downloadLinkSelector, (el) => el.href));
 
@@ -106,9 +104,3 @@ export const downloadTiktok = async (url: string) => {
   const typeFile = "mp4";
   return { downloadLink, typeFile };
 };
-
-// downloadTiktok(
-//   "https://www.tiktok.com/@rucenuenda1/video/7435229478034410759?is_from_webapp=1&sender_device=pc"
-// ).then((results) => console.log(results.downloadLink));
-
-// downloadTiktok("https://www.tiktok.com/@shasyaaag/photo/7382429433199709446?is_from_webapp=1&sender_device=pc&web_id=7433056867415688711").then((results) => console.log(results.downloadLink))

@@ -13,11 +13,19 @@ Usage: Kirim gambar dengan caption _!sticker_
 Untuk tanya AI
 Usage: Kirim _!chatai_ <Prompt / Pertanyaan>
 
-2. _!tomp3_
+3. _!ig_
+Untuk Mendownload Konten IG
+Usage: Kirim _!ig_ <link ig>
+
+4. _!tiktok_
+Untuk Mendownload Konten Tiktok
+Usage: Kirim _!tiktok_ <link tiktok>
+
+5. _!tomp3_
 Untuk mengubah ke mp3
 Usage: Kirim video dengan caption _!tomp3_
 
-3. _!tomp4_
+6. _!tomp4_
 Untuk mengubah format video ke mp4
 Usage: Kirim video dengan caption _!tomp4_
     `;

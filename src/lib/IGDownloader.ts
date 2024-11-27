@@ -55,14 +55,14 @@ export const downloadIg = async (url: string) => {
 
   // Klik tombol download
   const downloadButtonSelector = "#btn-submit"; // Selektor tombol download
-  await page.waitForSelector(downloadButtonSelector);
-  await delay(1000)
+  await page.waitForSelector(downloadButtonSelector, {visible: true});
+  await delay(1500)
   await page.click(downloadButtonSelector);
 
   //popup iklan
   const closeButton = "#close-modal";
-  await page.waitForSelector(closeButton);
-  await delay(1000);
+  await page.waitForSelector(closeButton, {visible: true});
+  await delay(1500);
   await page.click(closeButton);
 
   let downloadLink: string[] = []
