@@ -4,6 +4,7 @@ import qrcode from "qrcode-terminal";
 import commands from "./commands";
 import config from "./config/config.json"
 import { console } from "inspector";
+import Messages from "./Messages"
 
 let _limit = JSON.parse(fs.readFileSync(`${config.basePathSrc}database/limit.json`).toString())
 
@@ -33,6 +34,10 @@ export const client = new Client({
   authStrategy: new LocalAuth(),
 });
 
+client.on("ready", () => {
+  console.log("Client ready...")
+})
+
 client.on("qr", (qr) => {
   qrcode.generate(qr, { small: true });
   console.log("SCAN QR")
@@ -59,9 +64,8 @@ client.on("disconnected", (reason) => {
   console.log(reason);
 });
 
-client.on("ready", () => {
-  console.log("Client ready...")
-})
+
+const message = new Messages()
 
 client.on("message", async (msg) => {
   const isUserAdded = _limit.find((user: { userId: string; }) => user.userId === msg.from)
@@ -70,14 +74,9 @@ client.on("message", async (msg) => {
   if(isUserAdded === undefined) {
     _limit.push({ "id": Math.floor(_limitLenght + 1), "userId": msg.from, "name": user.pushname, "convertToolsUsed": 0, "chatAiUsed": 0 })
     fs.writeFileSync(`${config.basePathSrc}database/limit.json`, JSON.stringify(_limit))
-    for (const command of commands) {
-      command.handle(msg);
-    }
   }
 
-  for (const command of commands) {
-    command.handle(msg);
-  }
+  message.handleMessage(msg)
 });
 
 client.initialize();

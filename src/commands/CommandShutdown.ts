@@ -2,6 +2,7 @@ import { Message } from "whatsapp-web.js";
 import Command from "./Command";
 import { client, shutdown } from "..";
 import { isAdmin } from "../functions/isAdmin";
+import { delay } from "../functions/functions";
 
 export class CommandShutdown extends Command {
   constructor() {
@@ -19,10 +20,8 @@ export class CommandShutdown extends Command {
         console.log(
           `Shutdown command received from ${userId}. Shutting down...`
         );
-
-        await setTimeout(() => {
-          client.destroy();
-        }, 1500);
+        await delay(15000);
+        client.destroy();
         process.exit(0);
       } else {
         msg.reply("Maaf, perintah ini hanya untuk admin.");
