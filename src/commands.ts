@@ -11,10 +11,12 @@ import { CommandClear } from "./commands/CommandClear"
 import { CommandTesting } from "./commands/CommandTesting";
 import { CommandIgDown } from "./commands/CommandIgDown";
 import { CommandTiktokDown } from "./commands/CommandTiktokDown"
+import { CommandMenuGames } from "./commands/CommandMenuGames"
 
 const commands: Command[] = [
   new CommandMenu(),
   new CommandMenuTools(),
+  new CommandMenuGames(),
   new CommandShutdown(),
   new CommandClear(),
   new CommandSay(),

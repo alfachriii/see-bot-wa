@@ -5,6 +5,30 @@ import axios from "axios";
 import path from "path";
 import config from "../config/config.json"
 
+const message = (userName: string, botName: string, contact: string, instagram: string) => {return `
+Hello *@${userName}*,
+*Selamat Datang di _${botName}_*
+
+Daftar prefix: (!),(.),(/)
+
+Commnd khusus Admin:
+!shutdown
+Untuk mematikan Bot
+
+Command Untuk Semua Users:
+_!menutools_
+Untuk Menampilkan Menu tools
+Usage: Ketik _!menutools_
+
+_!menugames_
+Untuk Menampilkan Menu Games
+Usage: Ketik _!menugames_
+
+
+_owner: wa.me/${contact}_
+${instagram}
+`}
+
 export class CommandMenu extends Command {
   constructor() {
     super("menu", "it's command menu", ["help"]);
@@ -32,7 +56,7 @@ export class CommandMenu extends Command {
       }
 
       client.sendMessage(msg.from, media || "", {
-        caption: `*Hello _@${user.pushname}_,*\n*Selamat Datang Di ${config.botName}*\n\n\n*~prefix: [!],[.],[/]*\n\n*Command Khusus Admin:*\n!shutdown\nUntuk Mematikan Bot\n\n*Command Untuk Semua Users:*\n*!say*\nPerintah untuk bot mengirim pesan\nUsage: ketik !say hello\n\n!menutools\nMenampilkan Menu tools tools yang berguna\nUsage: ketik !menutools\n\n*_owner: wa.me/${config.author.contact}_*\n*${config.author.instagram}*`,
+        caption: message(user.pushname, config.botName, config.author.contact, config.author.instagram),
       });
     } catch (error) {
       console.error("ERROR saat mengirim gambar: ", error);
