@@ -13,11 +13,20 @@ export class CommandConvertToMp4 extends Command {
   }
 
   async execute(msg: Message, args: string[]): Promise<void> {
-    if (!msg.hasMedia) {
+    let media;
+
+    if (msg.hasQuotedMsg) {
+      const quotedMsg = await msg.getQuotedMessage();
+      
+      media = await quotedMsg.downloadMedia();
+    } else if(!msg.hasMedia) {
       msg.reply("Tolong Masukkan / kirim video yang ingin diconvert!");
+
       return;
+    } else {
+      media = await msg.downloadMedia();
     }
-    const media = await msg.downloadMedia();
+
     const mimetype = media.mimetype;
     const mediaType = mimetype.split("/")[0];
     const filesize = media.filesize || 700000;

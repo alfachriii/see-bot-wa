@@ -169,5 +169,107 @@
         "name": "Boulevard of Broken Dreams - Green Day",
         "link": "https://cdn-preview-b.dzcdn.net/stream/c-b9f23e8520b5b8b09a7f6b5f849f43fa-1.mp3",
         "answer": ["boulevard of broken dreams", "broken dreams", "boulevard", "boulvard of broken dreams", "green day"]
+    },
+    {
+        "lang": "en",
+        "name": "If I Fell",
+        "link": "https://drive.google.com/uc?export=download&id=1CFRyx9qfRo_Hz5Hwg89g5dk-KmwSiUoX",
+        "answer": "if i fell"
+    },
+    {
+        "lang": "en",
+        "name": "Urn - Crying City",
+        "link": "https://drive.google.com/uc?export=download&id=1HHExpD3kQRcq0sKAxIUyy9YLQmuJ3ZKq",
+        "answer": "urn"
+    },
+    {
+        "lang": "en",
+        "name": "Mr. Brownstone - GNR",
+        "link": "https://drive.google.com/uc?export=download&id=1F-lq49CtKPhuaIAT_LlslLV2vCoTqW1l",
+        "answer": "mr brownstone"
+    },
+    {
+        "lang": "en",
+        "name": "Don't Damn Me - GNR",
+        "link": "https://drive.google.com/uc?export=download&id=1URXA5Tw9jqG37-FDwdbd8ndxES1bcY3t",
+        "answer": "don't damn me"
+    },
+    {
+        "lang": "en",
+        "name": "Mr. Loverman - Ricky M",
+        "link": "https://drive.google.com/uc?export=download&id=1kwwCstQSamdL5GY6pWSyOcrzw9SfYBSn",
+        "answer": "mr. loverman"
+    },
+    {
+        "lang": "en",
+        "name": "Til Death Do us Part - White Lion",
+        "link": "https://drive.google.com/uc?export=download&id=1GHegRG8yxPv-w_MFqoQH2Nt9Pj2PuMto",
+        "answer": "til death do us part"
+    },
+    {
+        "lang": "en",
+        "name": "Cry - Cigarettes After Sex",
+        "link": "https://drive.google.com/uc?export=download&id=1J1SbJ0gZznr2MH2g0mZ0v5UdqFq7DYSu",
+        "answer": "cry cigarettes after sex"
+    },
+    {
+        "lang": "en",
+        "name": "Creep - Radiohead",
+        "link": "https://drive.google.com/uc?export=download&id=1sWfdlO_al09S3ZhsmOkzokdg4z6bSt7m",
+        "answer": "creep"
+    },
+    {
+        "lang": "id",
+        "name": "Sabilulungan",
+        "link": "https://cdn-preview-e.dzcdn.net/stream/c-ea92e6d4f6110570941b28e8cf04720b-3.mp3",
+        "answer": "sabilulungan"
+    },
+    {
+        "lang": "en",
+        "name": "Every Time it Rains - Nazareth",
+        "link": "https://drive.google.com/uc?export=download&id=1bIJuEeKzC0DOKeOqJ6etQ-wXlAfJS6dP",
+        "answer": "every time it rains nazareth"
+    },
+    {
+        "lang": "en",
+        "name": "Heather - Conan Gray",
+        "link": "https://drive.google.com/uc?export=download&id=1NpEbTyQ4WeXwvjEg2U68mVCEu-8-jqAY",
+        "answer": ""
+    },
+    {
+        "lang": "id",
+        "name": "Peradaban - .feast",
+        "link": "https://drive.google.com/uc?export=download&id=1yR4RPhccZ9gsQlQGNWl06iDWATSEwPBu",
+        "answer": "peradaban feast"
+    },
+    {
+        "lang": "en",
+        "name": "Remember You Omnichord - Trillian",
+        "link": "https://drive.google.com/uc?export=download&id=1n5fI7dtoXJ7rN6KZse4r7rAAde-Ur2V2",
+        "answer": "remember you omnichord"
+    },
+    {
+        "lang": "en",
+        "name": "A Burning Hill - Mitski",
+        "link": "https://drive.google.com/uc?export=download&id=1E6wtSvZ6GF-KC_1WgR_f1ojcqLfeN-cE",
+        "answer": "a burning hill"
+    },
+    {
+        "lang": "id",
+        "name": "Sunshine - The Panturas",
+        "link": "https://drive.google.com/uc?export=download&id=1gDpqiJcoQCPvUvIpdEbswvC1J1gajhon",
+        "answer": "sunshine the"
+    },
+    {
+        "lang": "en",
+        "name": "Asleep Among Endives - Ichiko Aoba",
+        "link": "https://drive.google.com/uc?export=download&id=15pkicM9RbqpEJksluG4AttPVkQZlsWG1",
+        "answer": "asleep among endives"
+    },
+    {
+        "lang": "en",
+        "name": "Welcome to The Jungle - GNR",
+        "link": "https://drive.google.com/uc?export=download&id=1X3SdNG9qiuRhWrKyvYrluMFiw_8PhOlp",
+        "answer": "welcome to the jungle"
     }
 ]

@@ -4,6 +4,7 @@ import { client } from "..";
 import * as fs from "fs";
 import path from "path";
 import config from "../config/config.json";
+import { delay } from "../functions/functions";
 
 export class CommandSticker extends Command {
   constructor() {
@@ -11,6 +12,19 @@ export class CommandSticker extends Command {
   }
 
   async execute(msg: Message, args: string[]): Promise<void> {
+    if (msg.hasQuotedMsg) {
+      const qoutedMsg = await msg.getQuotedMessage();
+
+      msg.reply("_Loading..._");
+      const image = await qoutedMsg.downloadMedia();
+      client.sendMessage(msg.from, image, {
+        sendMediaAsSticker: true,
+        stickerAuthor: `${config.botName}'78`,
+      });
+
+      return;
+    }
+
     if (!msg.hasMedia) {
       msg.reply(
         "Tolong kirim gambar/video terlebih dahulu!\nContohnya seperti: "
@@ -20,14 +34,16 @@ export class CommandSticker extends Command {
       setTimeout(() => {
         client.sendMessage(msg.from, media, { caption: "!sticker" });
       }, 500);
-    } else {
-      msg.reply("Loading...");
-      const image = await msg.downloadMedia();
-      client.sendMessage(msg.from, image, {
-        sendMediaAsSticker: true,
-        stickerAuthor: `${config.botName}'78`,
-      });
+
+      return;
     }
+
+    msg.reply("_Loading..._");
+    const image = await msg.downloadMedia();
+    client.sendMessage(msg.from, image, {
+      sendMediaAsSticker: true,
+      stickerAuthor: `${config.botName}'78`,
+    });
   }
 }
 
